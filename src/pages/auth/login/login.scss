@@ -1,0 +1,62 @@
+@use "bulma/sass/form";
+@use "bulma/sass/elements/button";
+@use "bulma/sass/elements/icon";
+
+
+:root {
+    --primary-background-color:  #396647;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+}
+.cell-01 {
+    flex: 1;
+    height: 100%;
+    background: no-repeat url("./../../../assets/loginLogo.png");
+    background-size: cover;
+}
+
+.cell-02 {
+
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-background-color);
+    .title {
+        max-width: 70%;
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .login-form {
+        width: 70%;
+        .button {
+            background-color: white;
+            color: black;
+            border-color: white;
+            border-radius: 10px;
+        }
+    }
+    .input {
+        border-radius: 10px;
+        border-color: #396647;
+        background: linear-gradient(0deg, #6E8946, #6E8946),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    }
+    
+}
+
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
