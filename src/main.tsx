@@ -5,6 +5,8 @@ import "./main.scss"
 import Login from './pages/auth/login/login'
 import Home from './pages/home'
 
+import Container from './components/container'
+
 // router configuration
 const router = createBrowserRouter([
   {
@@ -13,24 +15,34 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Home />
+    element: (
+      <Container>
+        <Home />
+      </Container>
+    ),
   },
   {
     path: "/operations",
     element: (
-      <div>Operation page</div>
+      <Container>
+        <h1>Page operations</h1>
+      </Container>
     )
   },
   {
     path: "/transfert",
     element: (
-      <div>Transfert Page</div>
+      <Container>
+        <h1>Page Transfert</h1>
+      </Container>
     )
   },
   {
     path: "/rapport",
     element: (
-      <div>Rapport page</div>
+     <Container>
+      <h1>Page de Rapport</h1>
+     </Container>
     )
   }, 
   {
@@ -61,5 +73,4 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <RouterProvider router={router} />
-
 )

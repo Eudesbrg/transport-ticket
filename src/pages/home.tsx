@@ -1,10 +1,10 @@
-import Sidebar from "../components/sidebar"
+import Header from "../components/header"
 
 function Home() {
     return (
         <>
-            <Sidebar />
-            <div></div>
+            <Header />
+            <h1>Home page</h1>
         </>
     )
 }
