@@ -1,0 +1,27 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+    gap: 10px;
+}
+
+.step-iconify {
+    height: 90px;
+    width: 90px;
+    background-color: #EDE8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #005F00;
+    cursor: pointer;
+}
+
+.description {
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+}

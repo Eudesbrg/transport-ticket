@@ -10,7 +10,7 @@ function Container({children}: Props) {
     return (
         <div style={{display: "flex"}}>
             <Sidebar />
-            <div style={{flex: 1}}>
+            <div style={{flex: 1, paddingLeft: "30px", paddingRight: "30px"}}>
                 <Header />
                 {children}
             </div>

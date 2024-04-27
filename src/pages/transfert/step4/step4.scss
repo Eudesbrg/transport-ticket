@@ -1,0 +1,29 @@
+.price-text {
+    color: #396647; 
+    font-size: 25px; 
+    font-weight: 600;
+    margin: 20px 0px 50px 0px;
+}
+
+
+.price {
+    color: #fff; 
+    border-radius: 10px;
+    display: "inline-block"; 
+    padding: 10px; 
+    background-color: #DE7A7A;
+}
+
+.paiement-wrapper {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+
+
+.paiement {
+    border: 2px solid #396647;
+    padding: 30px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}

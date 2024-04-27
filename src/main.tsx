@@ -4,6 +4,7 @@ import "./main.scss"
 
 import Login from './pages/auth/login/login'
 import Home from './pages/home'
+import Transfert from './pages/transfert'
 
 import Container from './components/container'
 
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
     path: "/transfert",
     element: (
       <Container>
-        <h1>Page Transfert</h1>
+        <Transfert />
       </Container>
     )
   },
