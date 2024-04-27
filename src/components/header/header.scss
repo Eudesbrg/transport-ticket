@@ -1,0 +1,8 @@
+@use "bulma/sass/form";
+
+header {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid black; 
+}

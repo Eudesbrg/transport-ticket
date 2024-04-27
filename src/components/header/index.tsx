@@ -1,8 +1,13 @@
 
+import "./header.scss"
 
 function Header () {
     return (
-        <div></div>
+        <header>
+            <button>Nouvelle Cellule</button>
+            <button>Mise à jour</button>
+            
+        </header>
     )
 }
 

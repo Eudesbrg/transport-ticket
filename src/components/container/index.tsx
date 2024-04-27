@@ -1,3 +1,4 @@
+import Header from "../header";
 import Sidebar from "../sidebar";
 
 type Props = {
@@ -9,7 +10,10 @@ function Container({children}: Props) {
     return (
         <div style={{display: "flex"}}>
             <Sidebar />
-            {children}
+            <div style={{flex: 1}}>
+                <Header />
+                {children}
+            </div>
         </div>
     )
 }
