@@ -1,14 +1,11 @@
-import { useState } from "react"
+
 
 import Divider from "../../components/divider"
 import TransfertItem from "../../components/tranfertItem"
-import Step1 from "./step1"
-import Step2 from "./step2"
-import Step3 from "./step3"
 import Step4 from "./step4"
 
 function nextStepHandler() {
-    
+
 }
 
 function prevStepHandler() {
@@ -18,7 +15,6 @@ function prevStepHandler() {
 import "./transfert.scss"
 
 function Transfert() {
-    const [step,setStep] = useState(1)
     return (
        <div className="transfert-main">
         <h1 className="transfert-title">Formulaire d'envoi de colis</h1>
