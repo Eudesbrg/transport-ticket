@@ -1,20 +1,26 @@
-
+import { Suspense, lazy, useState } from "react"
 
 import Divider from "../../components/divider"
 import TransfertItem from "../../components/tranfertItem"
-import Step4 from "./step4"
-
-function nextStepHandler() {
-
-}
-
-function prevStepHandler() {
-
-}
 
 import "./transfert.scss"
 
 function Transfert() {
+    const [step,setStep] = useState(1)
+    const DynamicStep = lazy(()=>import(`./step${step}/index.tsx`))
+    const nextStepHandler = ()=>{
+        if(step < 4) {
+            setStep((currentStep) => currentStep + 1)
+            return
+        }
+            
+        // send a request to kikiapay
+    }
+    const prevStepHandler = ()=>{
+        if(step > 1) {
+            setStep((currentStep) => currentStep - 1)
+        }
+    }
     return (
        <div className="transfert-main">
         <h1 className="transfert-title">Formulaire d'envoi de colis</h1>
@@ -22,25 +28,31 @@ function Transfert() {
             <TransfertItem 
                 step={1}
                 description={"Informations relatives au client"}
+                active={step >= 1}
             />
             <Divider />
             <TransfertItem 
                 step={2}
                 description={"Informations relatifs au colis"}
+                active={step >= 2}
             />
             <Divider />
             <TransfertItem 
                 step={3}
                 description={"Informations relatifs au destinataire"}
+                active={step >= 3}
             />
             <Divider />
             <TransfertItem 
                 step={4}
                 description={"Paiement"}
+                active={step == 4}
             />
         </nav>
         <div className="transfert-step">
-            <Step4 />
+            <Suspense fallback={<h1>Loading....</h1>}>
+                <DynamicStep />
+            </Suspense>
         </div>
         <div style={{display: "flex", justifyContent: "space-between", marginTop: "15px"}}>
             <button 
